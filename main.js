@@ -29,7 +29,7 @@ const todo = new Vue({
         },
         fetch(){
             this.loading = true;
-            fetch('https://jsonplaceholder.typicode.com/todos')
+            fetch('https://jsonplaceholder.typicode.com/todos?_limit=10')
             .then(response => response.json())
             .then(json => this.todoList=json.map(elem => {
                 return {
