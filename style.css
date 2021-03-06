@@ -5,6 +5,11 @@
 * {
   margin: 0
 }
+
+.page {
+  background-color: rgb(0, 0, 0);
+
+}
 .todo {
     display: flex;
     flex-direction: row;
@@ -42,7 +47,6 @@
 .main {
     display: flex;
     flex-direction: column;
-    background-color: rgb(0, 0, 0);
     color: #fff;
 }
 
