@@ -10,17 +10,8 @@
   <body class="page">
     <div class="main" id="main" v-cloak>
         <section class="todo" id="todo">
-        <input
-            type="text"
-            class="todo__input"
-            placeholder="Enter what to do"
-            v-model="task"
-            @keyup.enter="addTodo"
-        />
-
-        <button type="button" class="todo__button" @click="addTodo" >
-            Add
-        </button>
+          <input type="text" class="todo__input" placeholder="Enter what to do" v-model="task" @keyup.enter="addTodo" />
+          <button type="button" class="todo__button" @click="addTodo" >Add</button>
         </section>
         <section class="component" v-if="loading"><loader /></section>
         <section class="displayTask" v-else >
@@ -33,8 +24,8 @@
             v-else
             >
             <p>{{index + 1}}</p>
-            <div class="edit" v-if="item.edit"><input type="text" v-model="editInput" @keyup.enter="editTodo(index)"/>
-              <button @click="editTodo(index)" ><i class="fas fa-check"></i></button>
+            <div class="edit" v-if="item.edit"><input type="text" v-model="editInput" @keyup.enter="editTodo(index)" class="todo__input"/>
+              <button @click="editTodo(index)" class="todo__button"><i class="fas fa-check"></i></button>
             </div>
             <p v-else>{{item.title}}</p>
             <button @click="doneTodo(index)"><i class="fas fa-check"></i></button>
